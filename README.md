@@ -3,8 +3,7 @@
 ### Descripción
 Proyecto simple de Arduino para encender y apagar un LED con Arduino mediante la pulsación de un bóton  
   
-<img src="led_encendido.jpg" alt="Led Encendido" width="300">
-<img src="led_apagado.jpg" alt="Led Apagado" width="300">  
+<img src="led_encendido.jpg" alt="Led Encendido" width="300"><img src="led_apagado.jpg" alt="Led Apagado" width="300">  
 
 ### Objetivo
 Aprender funcionamiento básico de Arduino y del LED utilizando un boton para prender y apagar el LED
