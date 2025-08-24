@@ -36,6 +36,32 @@ void loop() {
     digitalWrite(led, LOW);  /Si el bóton no esta apretado el LED se apaga  
   }  
 }  
+
+### Código Toggle  
+    int led = 13; //pin digital al que esta conectado el led
+    int boton = 8; //pin digital al que esta conectado el bóton
+    int estadoboton; //variable para definir el estado del bóton
+    int botonanterior = LOW; //definimos una variable para que el primer estado del bónton este apagado
+    int estadoled = LOW; //igual con el led
+
+    void setup() {
+      pinMode(led, OUTPUT); //configuramos el led como salida
+      pinMode(boton, INPUT); //configuramos el bóton como entrada
+    }
+
+    void loop() {
+      estadoboton = digitalRead(boton); //el estado del bóton depende de su estado
+      if (estadoboton == LOW && botonanterior == HIGH){ //condicional si el estado del bóton esta apagado y el estado anterior estaba prendido
+
+        if(estadoled == LOW){ //y el estado del led esta apagado
+          estadoled = HIGH; //definimos el estado del led como prendido
+        }
+        else 
+        {
+          estadoled = LOW; //de lo contrario definimos el led como apagado
+        }
+        digitalWrite(led,estadoled); //prendemos el led
+      }
+      botonanterior = estadoboton; // cambia el estado del bóton anterior
+    }
   
-
-
